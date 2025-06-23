@@ -1742,7 +1742,7 @@ void CPlayerInventory::SOCacheSubscribed( const CSteamID & steamIDOwner, GCSDK::
 		if (pTypeCache->GetCount() >= GetMaxItemCount()) continue;
 		
 		// try to filter out non-items
-		if (!pItemDef->ShouldShowInArmory() && !pItemDef->IsAWearable()) continue;
+		if (!pItemDef->ShouldShowInArmory() && !pItemDef->IsActingAsAWeapon()) continue;
 
 		CreateAndAddEconItem(this, pTypeCache, pItemDef);
 	}
